@@ -1,5 +1,13 @@
 ///////TO DO /////
-//ability to draw different shapes
+//show examples and libraries
+//incrementing variables
+//conditionals
+//using images and video
+//saveFrame() and movie maker
+//export applications
+
+//ability to draw different shapes maybe with different keys?
+
 
 //declaring variables first
 float brushTransparency; 
@@ -10,7 +18,7 @@ boolean brushIsEraser = false;
 void setup(){
 size(300, 200); //initializing width and height
 
-brushTransparency = 50;//or initialize variables here in setup
+brushTransparency = 50;//you can initialize variables in setup too!
 
 }
 
@@ -24,8 +32,12 @@ rect(0, 0, width, height);
 //is the brush an eraser or not?
 if(brushIsEraser ==true){
   brushColor = 255; //brush color is white
+  stroke(255);
+strokeWeight(16);  // Thicker
 }else{
-  brushColor = mouseX/2;
+  brushColor = mouseX/2; //brush is color
+  stroke(brushColor*2, brushColor, 50, 20);
+strokeWeight(16);  // Thicker
 }
   //my first ellipse
 //noStroke();
@@ -42,8 +54,8 @@ ellipse(mouseX, mouseY, brushSize, brushSize);
 
 //if the mouse is pressed toggle between eraser brush or color brush
 void mousePressed(){
-  brushIsEraser = !brushIsEraser; //shorthand for toggling a boolean (true/false) variable
-  /*
+  brushIsEraser = !brushIsEraser; //shorthand for toggling a boolean (true/false) variable, ! means not
+  /* all this is the same as the above line
   if(brushIsEraser == false){
   brushIsEraser = true;
   }else{
@@ -51,12 +63,7 @@ void mousePressed(){
   */
   }
 
-
-
 /*
-
-
-
 //my second ellipse
 stroke(200, 100, 50);
 fill(#75C7F2); //light blue
