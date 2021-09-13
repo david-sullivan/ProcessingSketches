@@ -42,12 +42,15 @@ ellipse(mouseX, mouseY, brushSize, brushSize);
 
 //if the mouse is pressed toggle between eraser brush or color brush
 void mousePressed(){
+  brushIsEraser = !brushIsEraser; //shorthand for toggling a boolean (true/false) variable
+  /*
   if(brushIsEraser == false){
   brushIsEraser = true;
   }else{
   brushIsEraser = false;
+  */
   }
-}
+
 
 
 /*
