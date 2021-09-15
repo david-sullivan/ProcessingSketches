@@ -1,5 +1,7 @@
 float speed = 1;
 float circleX = 0;
+float randomColorRed = 0;
+float randomColorGreen = 0;
 
 void setup(){
   size(300, 200);
@@ -7,7 +9,9 @@ void setup(){
 }
 
 void draw(){
-  fill(255);
+  randomColorRed = random(255);
+  randomColorGreen = random(255);
+  fill(randomColorRed, randomColorGreen, 50);
   ellipse(circleX,height/2,20,  20);
   circleX = circleX +speed;// could be shortened to circleX += speed
   
@@ -26,4 +30,6 @@ void draw(){
     //circleX = 0;
     speed *= -1;
   }
+  
+  println("circleX =", circleX);
 }
